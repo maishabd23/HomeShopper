@@ -273,8 +273,8 @@ public class BudgetPlanner extends javax.swing.JFrame {
     private void infoActionPerformed(java.awt.event.ActionEvent evt) {                                     
         // TODO add your handling code here:
         //if user seeks information, information button will display description
-        JOptionPane.showMessageDialog(null, "Add all the items you buy this month into the table and see if it matches your budget!", "Information", JOptionPane.ERROR_MESSAGE);
-    }                                    
+        JOptionPane.showMessageDialog(null, "Add all the items you buy this month into the table and see if it matches your budget! Make sure to use numerical values in Price and Budget. No signs.", "Information", JOptionPane.ERROR_MESSAGE);
+    }                                        
 
     /**
      * @param args the command line arguments
