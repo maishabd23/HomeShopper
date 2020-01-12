@@ -1,0 +1,27 @@
+create an array for each category (item, date
+submit is pressed
+	for dates, submit as "31/12/1998" (https://www.javatpoint.com/java-string-to-date)
+		date of order
+		date of arrival
+		need todays date - https://stackabuse.com/how-to-get-current-date-and-time-in-java/
+
+		OR
+
+		days to arrive (easier way, but assumes that all orders were made on same date)
+
+	store each item in appropriate array (to be used later)
+
+
+
+when calender is pressed
+	get each date and convert to actual date
+		save in array diffDates
+	subtract each date from todays date - https://stackoverflow.com/questions/13037654/subtract-two-dates-in-java
+		store each difference into an array diffDatesSorted (low to high)
+
+
+	sort diffDates - https://www.quora.com/How-do-I-sort-an-ArrayList-of-dates-based-on-the-current-date-in-Java
+	for when each diffDatesSorted aligns with date in diffDates (original array) *** (loop within a loop)
+		place corresponding item on screen
+		place "x" many days until arrival
+
