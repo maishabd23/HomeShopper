@@ -1,0 +1,333 @@
+import java.awt.Color;
+import java.util.Vector;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
+
+public class BudgetPlanner extends javax.swing.JFrame {
+
+    /**
+     * Creates new form BudgetPlanner
+     */
+    public BudgetPlanner() {
+        initComponents();
+    }
+
+    
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        Message = new javax.swing.JLabel();
+        price = new javax.swing.JTextField();
+        store = new javax.swing.JTextField();
+        item = new javax.swing.JTextField();
+        budget = new javax.swing.JTextField();
+        total = new javax.swing.JTextField();
+        enter = new javax.swing.JButton();
+        add = new javax.swing.JButton();
+        info = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        table = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setLayout(null);
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Leelawadee UI", 1, 28)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("STORE");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(0, 90, 150, 40);
+
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Leelawadee UI", 1, 28)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("PRICE");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(0, 360, 150, 40);
+
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Leelawadee UI", 1, 28)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("ITEM");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(0, 220, 150, 40);
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Leelawadee UI", 1, 28)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("BUDGET");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(500, 450, 140, 60);
+
+        Message.setBackground(new java.awt.Color(255, 255, 255));
+        Message.setFont(new java.awt.Font("Leelawadee UI", 1, 28)); // NOI18N
+        Message.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(Message);
+        Message.setBounds(230, 580, 510, 60);
+
+        price.setBackground(new java.awt.Color(0, 0, 0));
+        price.setFont(new java.awt.Font("Leelawadee UI", 0, 24)); // NOI18N
+        price.setForeground(new java.awt.Color(255, 255, 255));
+        price.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                priceActionPerformed(evt);
+            }
+        });
+        jPanel1.add(price);
+        price.setBounds(150, 360, 170, 36);
+
+        store.setBackground(new java.awt.Color(0, 0, 0));
+        store.setFont(new java.awt.Font("Leelawadee UI", 0, 24)); // NOI18N
+        store.setForeground(new java.awt.Color(255, 255, 255));
+        store.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                storeActionPerformed(evt);
+            }
+        });
+        jPanel1.add(store);
+        store.setBounds(150, 90, 170, 36);
+
+        item.setBackground(new java.awt.Color(0, 0, 0));
+        item.setFont(new java.awt.Font("Leelawadee UI", 0, 24)); // NOI18N
+        item.setForeground(new java.awt.Color(255, 255, 255));
+        item.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemActionPerformed(evt);
+            }
+        });
+        jPanel1.add(item);
+        item.setBounds(150, 220, 170, 36);
+
+        budget.setBackground(new java.awt.Color(0, 0, 0));
+        budget.setFont(new java.awt.Font("Leelawadee UI", 0, 24)); // NOI18N
+        budget.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(budget);
+        budget.setBounds(690, 460, 220, 40);
+
+        total.setEditable(false);
+        total.setBackground(new java.awt.Color(0, 0, 0));
+        total.setFont(new java.awt.Font("Leelawadee UI", 0, 24)); // NOI18N
+        total.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(total);
+        total.setBounds(690, 530, 220, 40);
+
+        enter.setBackground(new java.awt.Color(0, 0, 0));
+        enter.setFont(new java.awt.Font("Leelawadee UI", 1, 26)); // NOI18N
+        enter.setForeground(new java.awt.Color(255, 51, 51));
+        enter.setText("ENTER");
+        enter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enterActionPerformed(evt);
+            }
+        });
+        jPanel1.add(enter);
+        enter.setBounds(80, 490, 190, 46);
+
+        add.setBackground(new java.awt.Color(0, 0, 0));
+        add.setFont(new java.awt.Font("Leelawadee UI", 1, 26)); // NOI18N
+        add.setForeground(new java.awt.Color(255, 51, 51));
+        add.setText("ADD");
+        add.setToolTipText("");
+        add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addActionPerformed(evt);
+            }
+        });
+        jPanel1.add(add);
+        add.setBounds(450, 520, 190, 46);
+
+        info.setIcon(new javax.swing.ImageIcon("C:\\Users\\user\\Documents\\infoICON.png")); // NOI18N
+        info.setToolTipText("");
+        info.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                infoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(info);
+        info.setBounds(10, 10, 40, 40);
+
+        table.setBackground(new java.awt.Color(0, 0, 0));
+        table.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
+        table.setForeground(new java.awt.Color(255, 255, 255));
+        table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "STORE", "ITEM", "PRICE"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(table);
+
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(480, 30, 453, 403);
+
+        jLabel1.setBackground(new java.awt.Color(51, 51, 51));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\user\\Documents\\BUDGETBackground.png")); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(0, 0, 1000, 650);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 650, Short.MAX_VALUE)
+        );
+
+        pack();
+    }// </editor-fold>                        
+
+    private void priceActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // TODO add your handling code here:
+    }                                     
+
+    private void storeActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // TODO add your handling code here:
+    }                                     
+
+    private void itemActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        // TODO add your handling code here:
+    }                                    
+
+    private void enterActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // TODO add your handling code here:
+        //Gets information from the table
+        DefaultTableModel dt = (DefaultTableModel) table.getModel();
+        Vector v = new Vector();
+        
+        try {
+            double d;
+            d = Double.parseDouble(price.getText()); 
+            v.add(store.getText());
+            v.add(item.getText());
+            v.add(price.getText());
+    
+            dt.addRow(v);
+        //catches exceptions if user inputs wrong type of value (not double) in price textfield
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Please enter proper values");
+        }
+       
+    }                                     
+
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {                                    
+        // TODO add your handling code here:
+        //Adds price together to comapre with user inputted budget
+        try {
+            int z = 0;
+            for (int x = 0; x < table.getRowCount(); x++) 
+            {
+                z+=Double.parseDouble(table.getValueAt(x, 2).toString());
+
+            }
+            total.setText(z+".00");
+
+            Double b;
+            b = Double.parseDouble(budget.getText());
+            Double t;
+            t = Double.parseDouble(total.getText());
+            
+            //if user is under budget, textfield will turn green and notify user
+            if (b>=t)
+            {
+                total.setBackground(Color.GREEN);
+                Message.setText("You are under budget for this month!");
+            } else //otherwise, it will turn red and notify the user as well
+            {
+                total.setBackground(Color.RED);
+                Message.setText("You are over budget for this month!");
+            }
+            //catches exception if user inputs wrong type of value for budget (double required)
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Please enter a number in Budget");
+        }
+        
+
+    }                                   
+
+    private void infoActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        // TODO add your handling code here:
+        //if user seeks information, information button will display description
+        JOptionPane.showMessageDialog(null, "Add all the items you buy this month into the table and see if it matches your budget!", "Information", JOptionPane.ERROR_MESSAGE);
+    }                                    
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(BudgetPlanner.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(BudgetPlanner.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(BudgetPlanner.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(BudgetPlanner.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new BudgetPlanner().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JLabel Message;
+    private javax.swing.JButton add;
+    private javax.swing.JTextField budget;
+    private javax.swing.JButton enter;
+    private javax.swing.JButton info;
+    private javax.swing.JTextField item;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField price;
+    private javax.swing.JTextField store;
+    private javax.swing.JTable table;
+    private javax.swing.JTextField total;
+    // End of variables declaration                   
+}
