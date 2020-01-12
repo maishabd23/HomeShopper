@@ -32,6 +32,7 @@ public class BudgetPlanner extends javax.swing.JFrame {
         enter = new javax.swing.JButton();
         add = new javax.swing.JButton();
         info = new javax.swing.JButton();
+        back = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
@@ -158,6 +159,15 @@ public class BudgetPlanner extends javax.swing.JFrame {
         jPanel1.add(info);
         info.setBounds(10, 10, 40, 40);
 
+        back.setIcon(new javax.swing.ImageIcon("C:\\Users\\user\\Documents\\returnICON.png")); // NOI18N
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
+        jPanel1.add(back);
+        back.setBounds(10, 600, 40, 40);
+
         table.setBackground(new java.awt.Color(0, 0, 0));
         table.setFont(new java.awt.Font("Leelawadee UI", 0, 14)); // NOI18N
         table.setForeground(new java.awt.Color(255, 255, 255));
@@ -274,7 +284,12 @@ public class BudgetPlanner extends javax.swing.JFrame {
         // TODO add your handling code here:
         //if user seeks information, information button will display description
         JOptionPane.showMessageDialog(null, "Add all the items you buy this month into the table and see if it matches your budget! Make sure to use numerical values in Price and Budget. No signs.", "Information", JOptionPane.ERROR_MESSAGE);
-    }                                        
+    }                                    
+
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        // TODO add your handling code here:
+        new Introduction().setVisible(true);
+    }                                    
 
     /**
      * @param args the command line arguments
@@ -314,6 +329,7 @@ public class BudgetPlanner extends javax.swing.JFrame {
     // Variables declaration - do not modify                     
     private javax.swing.JLabel Message;
     private javax.swing.JButton add;
+    private javax.swing.JButton back;
     private javax.swing.JTextField budget;
     private javax.swing.JButton enter;
     private javax.swing.JButton info;
